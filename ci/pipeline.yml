@@ -68,16 +68,16 @@ jobs:
         current_app_name: concourse-spring-boot
         # path: source-code/build/libs/concourse-spring-boot-0.0.2-SNAPSHOT.jar
 
-  # - name: deploy-to-dev
-  #   plan:
-  #   - get: build-artifact-jar
-  #     passed: [ package ]
-  #     trigger: true
-  #   - get: source-code
-  #     passed: [ package]
-  #   - put: deploy-dev-app
-  #     params:
-  #       manifest: source-code/manifest-test.yml
-  #       current_app_name: concourse-spring-boot
-  #       path: build-artifact-jar/concourse-spring-boot*.jar
+  - name: deploy-to-dev
+    plan:
+    - get: build-artifact-jar
+      passed: [ package ]
+      trigger: true
+    - get: source-code
+      passed: [ package]
+    - put: deploy-dev-app
+      params:
+        manifest: source-code/manifest.yml
+        current_app_name: spring-music
+        path: build-artifact-jar/spring-music.war
 
