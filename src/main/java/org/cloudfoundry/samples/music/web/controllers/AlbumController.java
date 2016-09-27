@@ -39,7 +39,7 @@ public class AlbumController {
     public Album update(@RequestBody @Valid Album album) {
         logger.info("Updating album " + album.getId());
         try {
-            System.out.println("BIG TIME PERFORMANCE PROBLEM");
+            System.out.println("BIG TIME PERFORMANCE PROBLEM (update)");
             Thread.sleep(4000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -52,7 +52,7 @@ public class AlbumController {
     public Album getById(@PathVariable String id) {
         logger.info("Getting album " + id);
         try {
-            System.out.println("BIG TIME PERFORMANCE PROBLEM");
+            System.out.println("BIG TIME PERFORMANCE PROBLEM (getById)");
             Thread.sleep(4000);
         } catch (InterruptedException e) {
             e.printStackTrace();
