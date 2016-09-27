@@ -13,6 +13,7 @@ pwd
 #publish
 
 echo "Move artifacts to output area"
+ls -R
 cp build/libs/spring-music.war ../build
 
 echo "Build and Publish -- Done"

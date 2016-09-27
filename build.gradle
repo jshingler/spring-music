@@ -117,6 +117,7 @@ task wrapper(type: Wrapper) {
 war {
     // omit the version from the war file name
     version = ""
+    baseName = "spring-music"
 }
 
 tomcatRun {

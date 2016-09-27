@@ -16,6 +16,11 @@ git config --global user.name "Concourse.CI"
 
 # Run Test on unrebased branch
 ./gradlew test
+./gradlew assemble
+
+cp build/libs/spring-music.war ../build
+
+
 
 # Rebase Origin Master on this branch and rerun test (Build Acceptance)
 # git merge origin/master
