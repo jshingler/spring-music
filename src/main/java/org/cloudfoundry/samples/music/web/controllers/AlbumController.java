@@ -45,6 +45,11 @@ public class AlbumController {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Album getById(@PathVariable String id) {
         logger.info("Getting album " + id);
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return repository.findOne(id);
     }
 
