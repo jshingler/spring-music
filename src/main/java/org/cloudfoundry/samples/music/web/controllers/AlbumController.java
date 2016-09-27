@@ -38,6 +38,12 @@ public class AlbumController {
     @RequestMapping(method = RequestMethod.POST)
     public Album update(@RequestBody @Valid Album album) {
         logger.info("Updating album " + album.getId());
+        try {
+            System.out.println("BIG TIME PERFORMANCE PROBLEM");
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return repository.save(album);
     }
 
