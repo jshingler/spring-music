@@ -46,6 +46,7 @@ public class AlbumController {
     public Album getById(@PathVariable String id) {
         logger.info("Getting album " + id);
         try {
+            System.out.println("BIG TIME PERFORMANCE PROBLEM");
             Thread.sleep(4000);
         } catch (InterruptedException e) {
             e.printStackTrace();
