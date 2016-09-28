@@ -28,12 +28,12 @@ public class InfoController {
     @ResponseBody
     @RequestMapping(value = "/info")
     public ApplicationInfo info() {
-        try {
-            System.out.println("BIG TIME PERFORMANCE PROBLEM (info)");
-            Thread.sleep(4000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     System.out.println("BIG TIME PERFORMANCE PROBLEM (info)");
+        //     Thread.sleep(4000);
+        // } catch (InterruptedException e) {
+        //     e.printStackTrace();
+        // }
         return new ApplicationInfo(springEnvironment.getActiveProfiles(), getServiceNames());
     }
 
